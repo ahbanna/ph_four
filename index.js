@@ -1,15 +1,31 @@
-function evenOdd(text){
-if(typeof text == "number" || text.length === 0){
-    return "Please enter text";
-    } else if(text.length % 2 === 0){
-        let evenText = "even";
-        return evenText;
+function gemsToDiamond (num1, num2, num3){
+    if(typeof num1 !== "number" || typeof num2 !== "number" || typeof num3 !== "number" ){
+        return "Please input three valid number"
     }
-    else{
-        let oddText = "odd";
-        return oddText;
+    let totalDiamond = num1 * 21 + num2 * 32 + num3 * 43;
+    if(totalDiamond >= 1000 * 2){
+        totalDiamond = totalDiamond - 2000;
+        return totalDiamond;
+    } else{
+        return totalDiamond;
+    }
 }
-}
-let text = "Bangladesh";
-let result = evenOdd(text);
+
+let result = gemsToDiamond(100,5, 1);
 console.log(result);
+
+
+
+
+// function gemsToDiamond (num1, num2, num3){
+//     let totalDiamond = num1 * 21 + num2 * 32 + num3 * 43;
+//     if(totalDiamond >= 2000){
+//         let diamond = totalDiamond - 2000;
+//         return diamond;
+//     } else{
+//         return totalDiamond;
+//     }
+// }
+
+// let result = gemsToDiamond(100,5,1);
+// console.log(result);
