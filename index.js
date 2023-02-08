@@ -1,31 +1,20 @@
-function gemsToDiamond (num1, num2, num3){
-    if(typeof num1 !== "number" || typeof num2 !== "number" || typeof num3 !== "number" ){
-        return "Please input three valid number"
+function findingBadData(numbers){
+    if (Array.isArray(numbers) === false){
+        return "Please input an array.";
     }
-    let totalDiamond = num1 * 21 + num2 * 32 + num3 * 43;
-    if(totalDiamond >= 1000 * 2){
-        totalDiamond = totalDiamond - 2000;
-        return totalDiamond;
-    } else{
-        return totalDiamond;
+
+    let count = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        let number = numbers[i];
+        if(number < 0){
+            count = count + 1;
+        }
     }
+    return count;
 }
 
-let result = gemsToDiamond(100,5, 1);
+let numbers = [ -4, -9, -5, -33, -55, 0 ];
+let result = findingBadData(numbers);
 console.log(result);
 
 
-
-
-// function gemsToDiamond (num1, num2, num3){
-//     let totalDiamond = num1 * 21 + num2 * 32 + num3 * 43;
-//     if(totalDiamond >= 2000){
-//         let diamond = totalDiamond - 2000;
-//         return diamond;
-//     } else{
-//         return totalDiamond;
-//     }
-// }
-
-// let result = gemsToDiamond(100,5,1);
-// console.log(result);
