@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phone Hunter</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+  <main class="container">
+    <h2>Welcome To Phone House</h2>
+    <section>
+      <div class="phone-search-area mb-3 w-50">
+        <input type="text" class="form-control" id="search-field" placeholder="Type here" value="samsung">
+        <button id="btn-search" class="btn btn-primary">Search</button>
+      </div>
+    </section>
+    <section class="not-found-area d-none" id="not-found">
+      <h5 class="text-danger ">No phone found. Please try with another one</h5>
+    </section>
+
+    <!-- spinner area starts -->
+    <section id="loader" class="spinner-area d-none">
+      <div style="height: 500px;" class="d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-success" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    </section>
+    <!-- spinner area end -->
+
+    <section>
+      <div id="all-phones" class="row row-cols-1 row-cols-md-4 g-4">
+      </div>
+    </section>
+
+
+    <!-- Show all area starts -->
+    <section id="show-all" class=" d-none text-center mt-4">
+      <button id="btn-show-all" class="btn btn-primary">Show all</button>
+    </section>
+    <!-- Show all area end -->
+
+    <!-- Modal starts -->
+    <!-- Button trigger modal -->
+   
+    
+    <!-- Modal -->
+    <div class="modal fade" id="phoneDetailModal" tabindex="-1" aria-labelledby="phoneDetailModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="phoneDetailModalLabel">Modal title</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div id="phone-details-modal-body" class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal end -->
+  </main>
+
+  <!-- All js here -->
+  <script src="./js/phonehunter.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
